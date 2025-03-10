@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata: 
   name: annotations
-  labels: 
+  annotations: 
    buildURL: "https://backend/jenkins"   
 spec:
   containers:
