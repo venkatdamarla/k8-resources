@@ -3,7 +3,7 @@ kind: Pod
 metadata: 
   name: annotations
   labels: 
-   buildURL: "https://backend/jenkins/"   
+   buildURL: "https://backend/jenkins"   
 spec:
   containers:
     - name: nginx
