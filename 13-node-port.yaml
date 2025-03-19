@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-np
+spec:
+  type: NodePort
+  selector: 
+    project: expense
+    component: backend
+    environment: dev
+    version: "1.0.0"
+    demo: np
+  ports:
+    - protocol: TCP
+      port: 80 # service port
+      targetPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: backend-pod
+  labels: 
+   project: expense
+   component: backend
+   environment: dev
+   version: "1.0.0"
+   demo:  np
+spec:
+  containers:
+    - name: nginx
+      image:  nginx
+
