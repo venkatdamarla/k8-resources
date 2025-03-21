@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: venkatdamarla/deployment:2.0
+        image: venkatdamarla/deployment:3.0
         ports:
         - containerPort: 80
 
